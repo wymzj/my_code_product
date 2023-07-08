@@ -1,0 +1,2 @@
+model_checkpoint_path: "check_rnn_interface_long_weight.tf"
+all_model_checkpoint_paths: "check_rnn_interface_long_weight.tf"
