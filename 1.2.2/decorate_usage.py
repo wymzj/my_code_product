@@ -166,7 +166,7 @@ print(id(a))
 b = A("lingyuntech")
 print(id(b))
 
-# 被装饰的类:单例类
+# 被装饰的类
 def cl_log(cls):
     class dec(object):
         def __init__(self, *args, **kwargs):
