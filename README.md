@@ -1,2 +1,1 @@
-# my_code_product
-my first GitHub repository
+第一章节，代码部分python语言高级技能和语法知识点，读者可以将此代码作为答案，来自己手写书上代码的补充。
