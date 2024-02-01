@@ -1,0 +1,6 @@
+boolean_a = True   #真
+boolean_b = False   #假
+boolean_c = 5 > 7
+print(boolean_a, boolean_b, boolean_c)
+print( 5 > 7 and 8 > 4 or 3 > 2) 
+# and 表示所有条件都必须为True才能为True。or只要有一个条件满足就为True
