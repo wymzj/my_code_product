@@ -1,0 +1,7 @@
+Tuple_a = (3,5,7,8,23,11,13,11)    #一维表达
+Tuple_b = ("AI",5,7,8,23,[11,13,11]) #二维混合表达
+print(len(Tuple_a))   # len()函数能得到列表的长度，也就是有几个元素
+print(len(Tuple_b))
+print(Tuple_b[2])    # 输出7
+print(Tuple_b[5][1])  # 输出
+print(type(Tuple_a))

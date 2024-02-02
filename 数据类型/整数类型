@@ -1,0 +1,6 @@
+Num_a = 18
+Num_b = 20
+Num_c = Num_b + Num_a
+print(Num_c)
+print(type(Num_c)) #<class 'str'> 表明为字符串类型
+
