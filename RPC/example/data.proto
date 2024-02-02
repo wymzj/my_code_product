@@ -1,0 +1,16 @@
+syntax = "proto3";
+service Cal {
+  rpc Add(AddRequest) returns (ResultReply) {}
+  rpc subtract(subtractRequest) returns (ResultReply) {}
+}
+message AddRequest {       //加法消息接口及参数
+  optional int32 num1  = 1;
+  optional int32 num2  = 2;
+}
+message subtractRequest {  //减法消息接口及参数
+  optional int32 num1  = 1;
+  optional int32 num2  = 2;
+}
+message ResultReply {
+  optional int32 number = 1;
+}
