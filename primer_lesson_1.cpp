@@ -1,18 +1,18 @@
 /*
-³õ¼¶µÚÒ»½Ú£º±äÁ¿
-ÕûĞÎ£ºint long
-¸¡µãĞÍ£ºfloat double
-Ö¸Õë(µØÖ·)
-×ÖÃæÁ¿
-¾ßÃû±äÁ¿
-×Ö·ûĞÍ
-Ã¶¾ÙĞÍ
-ÒıÓÃ±äÁ¿
-¹Ì¶¨±äÁ¿
-¾²Ì¬±äÁ¿
-½á¹¹¼°³õÊ¼»¯
-Êı×é
-±äÁ¿ÃüÃû¹æ·¶
+åˆçº§ç¬¬ä¸€èŠ‚ï¼šå˜é‡
+æ•´å½¢ï¼šint long
+æµ®ç‚¹å‹ï¼šfloat double
+æŒ‡é’ˆ(åœ°å€)
+å­—é¢é‡
+å…·åå˜é‡
+å­—ç¬¦å‹
+æšä¸¾å‹
+å¼•ç”¨å˜é‡
+å›ºå®šå˜é‡
+é™æ€å˜é‡
+ç»“æ„åŠåˆå§‹åŒ–
+æ•°ç»„
+å˜é‡å‘½åè§„èŒƒ
 */
 
 #include <iostream>
@@ -20,14 +20,14 @@
 #include <stdlib.h>
 
 using namespace std;
-int int_value = 10;               //¶ÌÕûĞÎ
-long long_value = 100;            //³¤ÕûĞÍ
-float float_value = 3.14;         //µ¥¸¡µãĞÍ
-double double_value = 3.1415926;  //Ë«¸¡µãĞÍ
-char str = 'C';                   //×Ö·û±äÁ¿
-const int const_int = 10;         //¹Ì¶¨±äÁ¿
-static int static_int = 0;        //¾²Ì¬±äÁ¿
-int& refer_int = int_value;       //ÒıÓÃ±äÁ¿£¬ÒÑÓĞ±äÁ¿µÄ±ğÃû
+int int_value = 10;               //çŸ­æ•´å½¢
+long long_value = 100;            //é•¿æ•´å‹
+float float_value = 3.14;         //å•æµ®ç‚¹å‹
+double double_value = 3.1415926;  //åŒæµ®ç‚¹å‹
+char str = 'C';                   //å­—ç¬¦å˜é‡
+const int const_int = 10;         //å›ºå®šå˜é‡
+static int static_int = 0;        //é™æ€å˜é‡
+int& refer_int = int_value;       //å¼•ç”¨å˜é‡ï¼Œå·²æœ‰å˜é‡çš„åˆ«å
 enum enumType {
     Monday,
     Tuesday,
@@ -36,15 +36,15 @@ enum enumType {
     Friday,
     Saturday,
     Sunday
-};                                            //Ã¶¾Ù±äÁ¿ enumType  et = Monday
+};                                            //æšä¸¾å˜é‡ enumType  et = Monday
 
 int* pValue = &int_value;
-int* pInt = (int*)malloc(sizeof(int));        //CĞÎÊ½¶ÑÖĞ·ÖÅäÄÚ´æ
-long* plong = new long;                       //C++ĞÎÊ½·ÖÅäÄÚ´æ
+int* pInt = (int*)malloc(sizeof(int));        //Cå½¢å¼å †ä¸­åˆ†é…å†…å­˜
+long* plong = new long;                       //C++å½¢å¼åˆ†é…å†…å­˜
 const char* pStr = "myfriend\0";
-char char_array[5] = { 'a','b','c','d','e'};  //¾²Ì¬·ÖÅäÊı×é 
+char char_array[5] = { 'a','b','c','d','e'};  //é™æ€åˆ†é…æ•°ç»„ 
 int int_array[10] = { 1,2,3,4,5,6,7,8,9,0};
-int* pNewInt = new int[10];                   //¶¯Ì¬·ÖÅäÊı×é
+int* pNewInt = new int[10];                   //åŠ¨æ€åˆ†é…æ•°ç»„
 
 struct pet
 {
@@ -53,7 +53,7 @@ struct pet
     float cat;
     int* pDog;
     string mystr;
-};                                            //½á¹¹ÀàĞÍ
+};                                            //ç»“æ„ç±»å‹
 
 void main()
 {
@@ -69,4 +69,12 @@ void main()
     }
     pet my_pet = {0};
     my_pet.mystr = "abc";
+    
+    int** ptr = new int*[10];   //äºŒç»´æŒ‡é’ˆ
+    for (int i = 0; i < 10; i++)
+    {
+        *ptr = new int[10];
+    }
+    delete[] * ptr;
+    delete[] ptr;
 }
