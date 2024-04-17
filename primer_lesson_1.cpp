@@ -45,6 +45,7 @@ const char* pStr = "myfriend\0";
 char char_array[5] = { 'a','b','c','d','e'};  //静态分配数组 
 char char_array_a[] = { 'a','b','c','d','e'};  //静态分配数组
 int int_array[10] = { 1,2,3,4,5,6,7,8,9,0};
+int int_array_b[3][2] = {{2, 3},{4, 5},{5, 7}};
 int* pNewInt = new int[10];                   //动态分配数组
 
 struct pet
