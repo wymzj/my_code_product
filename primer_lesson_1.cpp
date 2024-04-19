@@ -75,7 +75,7 @@ void main()
     int** ptr = new int*[10];   //二维指针
     for (int i = 0; i < 10; i++)
     {
-        *ptr = new int[10];
+        ptr[i] = new int[10];
     }
     delete[] * ptr;
     delete[] ptr;
