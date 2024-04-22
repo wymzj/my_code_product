@@ -8,11 +8,26 @@
 7、跳出和中断
 8、string字符串类型
 9、数组(字符串数组)的遍历
+10、预处理指令
 */
 
 
 #include <iostream>
 #include <string>
+
+#define Print(var)  cout<<(var)<<endl       //宏转换
+#define product(m,n) m*n                    //product(x,y+1) 时 x*y+1 错误
+#define product((m),(n))  ((m)*(n))         //正确
+
+#define MYSTR "this string"                 //不能给宏加双引号
+#define PrintString(arg) cout<<#arg         //在转换时把参数放到双引号中
+#define join(a, b) a##b                     //连接字符串
+#define CALCAVERAGE                         //定义一个宏标识
+#if defined CALCAVERAGE                     //#ifdef CALCAVERAGE #ifndef CALCAVERAGE  #if CPU==PENT
+//code1
+#elif LANGUAGE
+//code2
+#endif
 
 int main() {
     int a = 60;  // 二进制表示为 0011 1100
