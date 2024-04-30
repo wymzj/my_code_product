@@ -13,7 +13,7 @@ struct {              //匿名结构
     int age;
 } person, person_copy;
 
-struct alignas(32) AligStruct //字节对齐 在标准位的基础上扩展用
+struct alignas(32) AligStruct //字节对齐 在标准位的基础上扩展用。在GCC下一般用memalign等函数
 {
     char name[63];
     alignas(1) int age;
@@ -32,6 +32,7 @@ union {
 } uvalue;
 
 //参考预编译指令进行字节对齐
+//#pragma pack(push, 16)
 _Pragma("pack(1)")//表示它后面的代码都按照1个字节对齐，在标准位的基础上缩小
 struct stru3
 {
@@ -39,7 +40,7 @@ struct stru3
     int age;
 } stru3;
 _Pragma("pack()")//取消按照n个字节对齐，是对#pragma pack(n)的一个反向操作
-
+//#pragma pack(pop)
 int main()
 {
     printf("结构所占字节：%d\n", sizeof(alstru));
