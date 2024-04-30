@@ -1,26 +1,26 @@
 /*
-1¡¢×Ö½Ú¶ÔÆë
-2¡¢ÁªºÏ£¬ÄäÃûÁªºÏ
-3¡¢ÄÚ´æ²Ù×÷º¯Êı£ºmemset memcpy
+1ã€å­—èŠ‚å¯¹é½
+2ã€è”åˆï¼ŒåŒ¿åè”åˆ
+3ã€å†…å­˜æ“ä½œå‡½æ•°ï¼šmemset memcpy
 */
 #include <iostream>
 #include <stdio.h> 
 #include <string.h>
 
 
-struct {              //ÄäÃû½á¹¹  
+struct {              //åŒ¿åç»“æ„  
     char name[40];
     int age;
 } person, person_copy;
 
-struct alignas(32) AligStruct //×Ö½Ú¶ÔÆë
+struct alignas(32) AligStruct //å­—èŠ‚å¯¹é½ åœ¨æ ‡å‡†ä½çš„åŸºç¡€ä¸Šæ‰©å±•ç”¨
 {
     char name[63];
     alignas(1) int age;
     int salary;
 } alstru;
 
-union MyUnion          //ÉùÃ÷ÁªºÏ
+union MyUnion          //å£°æ˜è”åˆ
 {
     double ShareID;
     long LVal;
@@ -31,19 +31,19 @@ union {
     long LVal;
 } uvalue;
 
-//²Î¿¼Ô¤±àÒëÖ¸Áî½øĞĞ×Ö½Ú¶ÔÆë
-#pragma pack(32)//±íÊ¾ËüºóÃæµÄ´úÂë¶¼°´ÕÕn¸ö×Ö½Ú¶ÔÆë
+//å‚è€ƒé¢„ç¼–è¯‘æŒ‡ä»¤è¿›è¡Œå­—èŠ‚å¯¹é½
+_Pragma("pack(1)")//è¡¨ç¤ºå®ƒåé¢çš„ä»£ç éƒ½æŒ‰ç…§1ä¸ªå­—èŠ‚å¯¹é½ï¼Œåœ¨æ ‡å‡†ä½çš„åŸºç¡€ä¸Šç¼©å°
 struct stru3
 {
     char name[40];
     int age;
 } stru3;
-#pragma pack()//È¡Ïû°´ÕÕn¸ö×Ö½Ú¶ÔÆë£¬ÊÇ¶Ô#pragma pack(n)µÄÒ»¸ö·´Ïò²Ù×÷
+_Pragma("pack()")//å–æ¶ˆæŒ‰ç…§nä¸ªå­—èŠ‚å¯¹é½ï¼Œæ˜¯å¯¹#pragma pack(n)çš„ä¸€ä¸ªåå‘æ“ä½œ
 
 int main()
 {
-    printf("½á¹¹ËùÕ¼×Ö½Ú£º%d\n", sizeof(alstru));
-    printf("½á¹¹ËùÕ¼×Ö½Ú£º%d\n", sizeof(stru3));
+    printf("ç»“æ„æ‰€å å­—èŠ‚ï¼š%d\n", sizeof(alstru));
+    printf("ç»“æ„æ‰€å å­—èŠ‚ï¼š%d\n", sizeof(stru3));
     char str[50];
     memset(str, 0, sizeof(str));
     strcpy_s(str, "This is string.h library function");
@@ -52,10 +52,10 @@ int main()
     printf("%s\n", str);
 
     char myname[] = "Linyuntech";
-    /* Ê¹ÓÃÄÚ´æ¿½±´×Ö·û´®*/
+    /* ä½¿ç”¨å†…å­˜æ‹·è´å­—ç¬¦ä¸²*/
     memcpy(person.name, myname, strlen(myname) + 1);
     person.age = 46;
-    /* Ê¹ÓÃÄÚ´æ¿½±´½á¹¹ */
+    /* ä½¿ç”¨å†…å­˜æ‹·è´ç»“æ„ */
     memcpy(&person_copy, &person, sizeof(person));
 
     return(0);
