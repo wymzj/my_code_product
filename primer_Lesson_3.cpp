@@ -30,6 +30,13 @@
 #endif
 
 assert(2>1);                                 //断言语句
+void printBinary(int num)                    //打印成二进制
+{
+	for (int i = sizeof(num) * 8 - 1; i >= 0; --i) 
+    {
+		std::cout << ((num >> i) & 1);
+	}
+}
 
 int main() {
     std::cout<<__FILE__;   #标准预处理宏
