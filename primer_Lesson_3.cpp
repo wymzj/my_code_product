@@ -16,6 +16,7 @@
 #include <string>
 
 #define PI 3.1415926                        //宏定义 
+#undef PI                                   //取消宏定义
 //#define 标识符  字符串序列。宏定义有三个缺点：不能类型检查；没有作用域；不受命名空间限制。
 
 #define Print(var)  cout<<(var)<<endl       //宏置换
