@@ -1,19 +1,19 @@
 #include <iostream>
 
 /*
-ÃæÏò¶ÔÏó¿ª·¢£ºÀàµÄ¼Ì³Ğ
-1¡¢ÀàµÄÅÉÉú
-2¡¢¼Ì³ĞÏÂµÄ·ÃÎÊ¿ØÖÆ
-3¡¢¼Ì³ĞÏÂµÄ¸±±¾¹¹Ôìº¯Êı
-4¡¢¼Ì³ĞÏÂµÄÎö¹¹º¯Êı
-5¡¢ÖØ¸´µÄº¯ÊıÃû
-6¡¢¶àÖØ¼Ì³Ğ
-7¡¢ÖØ¸´µÄ¼Ì³Ğ
-8¡¢Ğé¼Ì³Ğ
-9¡¢´¿ĞéÀà
+é¢å‘å¯¹è±¡å¼€å‘ï¼šç±»çš„ç»§æ‰¿
+1ã€ç±»çš„æ´¾ç”Ÿ
+2ã€ç»§æ‰¿ä¸‹çš„è®¿é—®æ§åˆ¶
+3ã€ç»§æ‰¿ä¸‹çš„å‰¯æœ¬æ„é€ å‡½æ•°
+4ã€ç»§æ‰¿ä¸‹çš„ææ„å‡½æ•°
+5ã€é‡å¤çš„å‡½æ•°å
+6ã€å¤šé‡ç»§æ‰¿
+7ã€é‡å¤çš„ç»§æ‰¿
+8ã€è™šç»§æ‰¿
+9ã€çº¯è™šç±»
 */
 using namespace std;
-//»ùÀà
+//åŸºç±»
 class Box
 {
 public:
@@ -33,7 +33,7 @@ protected:
 	double height;
 };
 
-//¼Ì³Ğ×ÓÀà
+//ç»§æ‰¿å­ç±»
 class Carton : public  Box
 {
 public:
@@ -51,7 +51,7 @@ private:
 	char* m_pMaterial;
 };
 
-//¼Ì³Ğ×ÓÀà
+//ç»§æ‰¿å­ç±»
 class Soft : public  Box
 {
 public:
@@ -60,6 +60,12 @@ public:
 		m_pMaterial = new char[strlen(pStr + 1)];
 		strcpy_s(m_pMaterial, strlen(pStr) + 1, pStr);
 	}
+
+	Soft(const Soft& so):Box(so)    //å‰¯æœ¬æ„é€ å‡½æ•°
+	{
+	
+	}
+
 	~Soft()
 	{
 
@@ -69,7 +75,7 @@ private:
 	char* m_pMaterial;
 };
 
-//¶àÖØ¼Ì³Ğ
+//å¤šé‡ç»§æ‰¿
 class Middle : public Soft, public Carton
 {
 public:
@@ -87,13 +93,13 @@ private:
 	char* m_pMaterial;
 };
 
-//´¿ĞéÀà
+//çº¯è™šç±»
 class AbstractClass {
 public:
 	virtual void interfaceFunction() = 0;
-	// ¿ÉÒÔÓĞ¶à¸ö´¿Ğéº¯Êı
+	// å¯ä»¥æœ‰å¤šä¸ªçº¯è™šå‡½æ•°
 	virtual void anotherInterfaceFunction() = 0;
-	// Àà¿ÉÒÔ°üº¬³ÉÔ±±äÁ¿ºÍ³ÉÔ±º¯Êı
+	// ç±»å¯ä»¥åŒ…å«æˆå‘˜å˜é‡å’Œæˆå‘˜å‡½æ•°
 	int commonVariable;
 	void commonFunction();
 };
@@ -101,7 +107,7 @@ public:
 int main()
 {
 	Box box(2.3,3.3,3.4);
-	Middle mid("²»Èí²»Ó²");
+	Middle mid("ä¸è½¯ä¸ç¡¬");
 	mid.Soft::Box::get_v();
 	return 0;
 }
