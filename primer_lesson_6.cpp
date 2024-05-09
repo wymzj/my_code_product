@@ -79,11 +79,10 @@ private:
 class Middle : public Soft, public Carton
 {
 public:
-	Middle(const char* pStr = "Cardboard")
+	Middle(const char* pStr = "Middleboard")
 	{
 		m_pMaterial = new char[strlen(pStr + 1)];
 		strcpy_s(m_pMaterial, strlen(pStr) + 1, pStr);
-
 	}
 	~Middle()
 	{
