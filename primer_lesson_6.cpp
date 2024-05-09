@@ -55,7 +55,7 @@ private:
 class Soft : public  Box
 {
 public:
-	Soft(const char* pStr = "Cardboard")
+	Soft(const char* pStr = "Softboard")
 	{
 		m_pMaterial = new char[strlen(pStr + 1)];
 		strcpy_s(m_pMaterial, strlen(pStr) + 1, pStr);
