@@ -1,14 +1,14 @@
 /*
-º¯Êı±à³Ì£º
-1¡¢º¯ÊıµÄÉùÃ÷
-2¡¢¸øº¯Êı´«²ÎÊı£¬°´Öµ´«µİ¡¢°´ÒıÓÃ´«µİ¡¢Ä¬ÈÏ²ÎÊıÖµ
-3¡¢·µ»ØÖµ£¬·µ»ØÒ»¸öÖ¸Õë£¬·µ»ØÒ»¸öÒıÓÃ£¬·µ»ØÒ»¸öĞÂ±äÁ¿
-4¡¢ÄÚÁªº¯Êı
-5¡¢º¯ÊıÖØÔØ
-6¡¢º¯ÊıÖ¸Õë
-7¡¢µİ¹éº¯Êı
-8¡¢Ä£°åº¯Êı
-9¡¢º¯ÊıÖ¸Õë
+å‡½æ•°ç¼–ç¨‹ï¼š
+1ã€å‡½æ•°çš„å£°æ˜
+2ã€ç»™å‡½æ•°ä¼ å‚æ•°ï¼ŒæŒ‰å€¼ä¼ é€’ã€æŒ‰å¼•ç”¨ä¼ é€’ã€é»˜è®¤å‚æ•°å€¼
+3ã€è¿”å›å€¼ï¼Œè¿”å›ä¸€ä¸ªæŒ‡é’ˆï¼Œè¿”å›ä¸€ä¸ªå¼•ç”¨ï¼Œè¿”å›ä¸€ä¸ªæ–°å˜é‡
+4ã€å†…è”å‡½æ•°
+5ã€å‡½æ•°é‡è½½
+6ã€å‡½æ•°æŒ‡é’ˆ
+7ã€é€’å½’å‡½æ•°
+8ã€æ¨¡æ¿å‡½æ•°
+9ã€å‡½æ•°æŒ‡é’ˆ
 */
 #include <iostream>
 #include <stdio.h>
@@ -46,25 +46,25 @@ double average(double array[], int count)
 //	return sum / count;
 //}
 
-int* backpoint(int a)  //(int* a) ÕıÈ·
+int* backpoint(int a)  //(int* a) æ­£ç¡®
 {
-	return &a; //´íÎó
+	return &a; //é”™è¯¯
 	//return a;
 }
 
-int add(int x)         //º¯ÊıÖĞµÄ¾²Ì¬±äÁ¿
+int add(int x)         //å‡½æ•°ä¸­çš„é™æ€å˜é‡
 {
 	static int sum = 0;
 	sum += x;
 	return sum;
 }
 
-inline int larger(int m, int n)  //ÄÚÁªº¯Êı
+inline int larger(int m, int n)  //å†…è”å‡½æ•°
 {
 	return m>n?m:n;
 }
 
-int recurence(int n)            //µİ¹éº¯Êı
+int recurence(int n)            //é€’å½’å‡½æ•°
 {
 	if (n < 0)
 	{
@@ -77,10 +77,37 @@ int recurence(int n)            //µİ¹éº¯Êı
 	}
 }
 
-template<class T>               //Ä£°åº¯Êı
+class Greater      //ä»¿å‡½æ•°
+{
+public:
+	bool operator()(int a, int b)
+	{
+		return a > b;
+	}
+}
+/*åŒ¿åå‡½æ•°
+[æ•è·åˆ—è¡¨](å‚æ•°åˆ—è¡¨) mutable(å¯é€‰) å¼‚å¸¸å±æ€§ -> è¿”å›ç±»å‹ 
+{
+   // å‡½æ•°ä½“
+}
+[=, &x, &ï¼Œthis]  //æ•è·åˆ—è¡¨ 
+*/
+auto f = [] (int x, int y) mutable throw()|noexcept  -> int {return x + y;}
+
+void value_capture() {
+    int value = 1;
+    auto copy_value = [value] {
+        return value;
+    };
+    value = 100;
+    auto stored_value = copy_value();
+    std::cout << "stored_value = " << stored_value << std::endl;
+}
+
+template<class T>               //æ¨¡æ¿å‡½æ•°
 T template_fun(T a, T b) { return a + b; }
 
-int (*pfun)(int*, int*);       //º¯ÊıÖ¸Õë
+int (*pfun)(int*, int*);       //å‡½æ•°æŒ‡é’ˆ
 
 int func(int (*pfun)(int*, int*), int* a,int* b)
 {
@@ -95,5 +122,8 @@ int main()
 	pfun = substract;
 	pfun(&a, &b);
 	func(substract, &a, &b);
+	int m = 0, n = 0;
+	[&, n] (int a) mutable { m = ++n + a; }(4);
+	cout << m << endl << n << endl;
 	return 0;
 }
