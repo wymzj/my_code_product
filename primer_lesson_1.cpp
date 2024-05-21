@@ -77,6 +77,10 @@ void main()
     {
         ptr[i] = new int[10];
     }
-    delete[] * ptr;
+    ptr[4][7] = 100;
+    for (int i = 0; i < 10; i++)
+    {
+	delete [] ptr[i];
+    }
     delete[] ptr;
 }
