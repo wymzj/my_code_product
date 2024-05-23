@@ -9,6 +9,7 @@
 7、递归函数
 8、模板函数
 9、函数指针
+10、匿名函数
 */
 #include <iostream>
 #include <stdio.h>
