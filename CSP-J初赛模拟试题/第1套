@@ -286,16 +286,17 @@ A.a[s]=0;		B.f(s-1);	C.a[s]=i;	D.b[i]=0;
 29	else return 0;	
 30 }
 31
-32 int main()33 {
-34	  cin>>n>>m;	
-35	  while(m--)	
+32 int main()
+33 {
+34    cin>>n>>m;	
+35    while(m--)	
 36    {
-37	      cin>>x>>y;	
-38	      G[x].push_back(y);	
+37       cin>>x>>y;	
+38       G[x].push_back(y);	
 39       _____⑤
 40    }
-41	if (pd () ) cout<<"存在有向环";	
-42	else cout<<"不存在有向环";	
+41    if (pd ()) cout<<"存在有向环";	
+42    else cout<<"不存在有向环";	
 43 }
 
 39.①处应填()。
