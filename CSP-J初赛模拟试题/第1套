@@ -229,7 +229,7 @@ A.20	B.12	C.11	D.21
 24   }	
 25 }
 26
-27	int main ()	
+27  int main ()	
 28  {
 29     f(1);	
 30     cout<<c<<endl;	
