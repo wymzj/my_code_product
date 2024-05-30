@@ -268,7 +268,7 @@ A.a[s]=0;		B.f(s-1);	C.a[s]=i;	D.b[i]=0;
 11 bool pd()
 12 {
 13	 for(int i-1;1<-n;1++)	
-14	   if (___①)q.push(i);	
+14	   if (___①) q.push(i);	
 15	 while(!q.empty())
 16   {
 17	    int u=q.top ();	
