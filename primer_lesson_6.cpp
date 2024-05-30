@@ -95,6 +95,7 @@ private:
 //纯虚类
 class AbstractClass {
 public:
+        //virtual ~AbstractClass()=0; 
 	virtual void interfaceFunction() = 0;
 	// 可以有多个纯虚函数
 	virtual void anotherInterfaceFunction() = 0;
@@ -102,7 +103,7 @@ public:
 	int commonVariable;
 	void commonFunction();
 };
-
+//AbstractClass::~AbstractClass(){}  // 纯虚函数的定义必须在类外实现
 int main()
 {
 	Box box(2.3,3.3,3.4);
