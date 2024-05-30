@@ -105,16 +105,16 @@ A. 6 3 6  B. 6 3 9  C. 6 3 3  D. 3 6 3
 16    {
 17        if(pd(i))	
 18        {
-19	          C++;	
+19            C++;	
 20            if(c==n)	
 21            { 
 22	             printf("%d",i);	
 23	             return 0:	
 24            }  
 25         }
-26      }
-27	   printf("\nover");	
-28	   return 0;	
+26     }
+27     printf("\nover");	
+28     return 0;	
 29  }
 
 ●判断题
