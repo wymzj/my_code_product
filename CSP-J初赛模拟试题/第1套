@@ -204,7 +204,7 @@ A.20	B.12	C.11	D.21
 最后一行一个数字,表示方案的总数。
 01 #include<bits/stdc++.h>
 02 using namespace std;
-03 #define n9
+03 #define n  9
 04 int a[10],b[10],t1,t2,t3,c;
 05 void f(int s){
 06	 int i;	
@@ -212,8 +212,8 @@ A.20	B.12	C.11	D.21
 08	   t1=a[1]*100+a[2]*10+a[3];	
 09	   t2=a[4]*100+a[5]*10+a[6];	
 10	   t3=a[7]*100+a[8]*10+a[9];	
-11	 if(_②){	
-12	   cout<<t1<<end1<<t2<<end1<<t3<<end1<<endl;	
+11	 if(___②){	
+12	   cout<<t1<<endl<<t2<<endl<<t3<<end1<<endl;	
 13	   c++;	
 14	 }	
 15   return;	
