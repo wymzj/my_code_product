@@ -49,20 +49,21 @@ A. 图灵  B. 诺贝尔  C. 摩尔  D. 冯.诺依曼
 
 二、阅读程序(程序输入不超过数组或字符串定义的范围；除特殊说明外，判断题每题1.5分，选择题每题3分，共计40分)
 （一）
-#include <iostream>
-using namespace std;
-int a,b,c;
-int main()
-{
-    cin>>a>>b>>c;
-    a=b-a;
-    b=b-a;
-    a=b+a;
-    c=b-a;
-    cout<<a<<" "<<b<<" "<<c;
-    return 0;
-}
-判断题
+01 #include <iostream>
+02 using namespace std;
+03 int a,b,c;
+04 int main()
+05 {
+06    cin>>a>>b>>c;
+07    a=b-a;
+08    b=b-a;
+09    a=b+a;
+10    c=b-a;
+11    cout<<a<<" "<<b<<" "<<c;
+12    return 0;
+13 }
+
+●判断题
 16.若输入1 2 3，由输出3 2 1。（）
 A. 正确  B. 错误
 
@@ -75,7 +76,7 @@ A. 正确  B. 错误
 19.若输入10，20，30(逗号隔开)，符合程序输入要求。( )
 A. 正确  B. 错误
 
-选择题：
+●选择题：
 20. 若输入10 20 30 ，输出()。
 A. 20 10 20  B. 20 10 10  C. 20 10 30  D. 20 10 -10
 
@@ -91,14 +92,14 @@ A. 6 3 6  B. 6 3 9  C. 6 3 3  D. 3 6 3
 06      for(long long i=2;i<n;i++)
 07         if(n%i==0) return false;
 08      return true;
-09 ｝
+09 }
 10 int main()
-11 ｛
+11 {
 12	  long long n,i,c-0;	
 13	  int INF*1<<30:	
 14	  scanf("ld",&n):	
 15	  for(i=2;1<=INF;i++)	
-16    ｛
+16    {
 17	      if(pd(i))	
 18        {
 19	        C++;	
@@ -111,7 +112,7 @@ A. 6 3 6  B. 6 3 9  C. 6 3 3  D. 3 6 3
 26      }
 27	  printf("\nover");	
 28	  return 0;	
-29  ｝
+29  }
 
 ●判断题
 22.上述代码中,若将第13行修改为INF=1<<40,则输出结果一定不变。()
