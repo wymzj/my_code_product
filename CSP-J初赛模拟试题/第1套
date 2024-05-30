@@ -72,39 +72,24 @@ A. 图灵  B. 诺贝尔  C. 摩尔  D. 冯.诺依曼
 （一）
 
 01 #include <iostream>
-
 02 using namespace std;
-
 03 int a,b,c;
-
 04 int main()
-
 05 {
-
 06      cin>>a>>b>>c;
-
 07      a=b-a;
-
 08      b=b-a;
-
 09      a=b+a;
-
 10      c=b-a;
-
 11      cout<<a<<" "<<b<<" "<<c;
-
 12      return 0;
-
 13 }
 
 ●判断题
-
 16.若输入1 2 3，由输出3 2 1。（）
-
 A. 正确  B. 错误
 
 17.若输入 123456789012 2 3，将输出 2 123456789012 123456789010。( )
-
 A. 正确  B. 错误
 
 18.该程序中，头文件#include <iostream> 可以改写成#include <cstdio>。（）
@@ -127,100 +112,62 @@ A. 6 3 6  B. 6 3 9  C. 6 3 3  D. 3 6 3
 
 (二)
 01 #include <cstdio>
-
 02 bool pd(long long n)
-
 03 {
-
 04      if(n==1)
-
 05         return false;
-
 06      for(long long i=2;i<n;i++)
-
 07         if(n%i==0) return false;
-
 08      return true;
-
 09 }
-
 10 int main()
-
 11 {
-
 12	  long long n,i,c-0;	
-
 13	  int INF*1<<30:	
-
 14	  scanf("ld",&n):	
-
 15	  for(i=2;1<=INF;i++)	
-
 16    {
-
 17	      if(pd(i))	
-
 18        {
-
 19	          C++;	
-
 20	          if(c==n)	
-
 21            { 
-
 22	             printf("%d",i);	
-
 23	             return 0:	
-
 24            }  
-
 25         }
-
 26      }
-
 27	   printf("\nover");	
-
 28	   return 0;	
-
 29  }
 
 ●判断题
 22.上述代码中,若将第13行修改为INF=1<<40,则输出结果一定不变。
-
 A.正确	B.错误
 
 23.上述代码中,将第23行修改为break或continue这两种情况后,有相同的输人,
 这两种情况下,输出结果也一定相同。()
-
 A.正确	B.错误
 
 24.上述代码中,将第23行修改为break后,有相同的输入,变量c的值和未修改前
 定相同。()
-
 A.正确	B.错误
 
 25.上述代码中,将第 23行修改为break后,有相同的输入,输出结果也一定相同。()
-
 A.正确	B.错误
 
 ●选择题
 26.输人为:8
 输出为()。
-
 A.17	B.19 回车 over	C.19	D.23\nover
 
 27.上述代码中,将第6行的i<n修改为( )后功能不变,效率更高。
-
 A.i*i<=nB.i<n/2	C.i<n/3	D.i<n/4	
 
 (三)
-
 01 #include<bits/stdc++.h>
-
 02 using namespace std;
-
 03 int a[100][100];
-
 04 int b[100][100];
 05 int f(int m,int n) {
 06   if (m<=0 || n<=0)
