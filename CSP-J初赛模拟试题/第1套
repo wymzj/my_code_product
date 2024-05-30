@@ -1,3 +1,5 @@
+【总用时两个小时完成】
+
 一、单项选择题（共15题，每题2分，共计30分；每题有且仅有一个正确选项）
 1.以下与电子邮件无关的网络协议是（）。
 A.SMTP  B.POP3  C.MIME  D.FTP
@@ -253,7 +255,7 @@ A.a[s]=0;		B.f(s-1);	C.a[s]=i;	D.b[i]=0;
 接下来m行,每行2个正整数x,y表示节点x->y之间有一条边。输出:
 一个拓扑序:按拓扑序输出点的编号。若拓扑序不唯一,输出任意一个均可,并输出“存在有向环”。若无拓扑序,直接输出“不存在有向环”.
 01 #include<iostream>
-02 tinclude<algorithm>
+02 #include<algorithm>
 03 #include<vector>
 04 #include<stack>
 05 #define N 1001
