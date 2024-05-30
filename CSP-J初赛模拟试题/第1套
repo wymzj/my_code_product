@@ -108,8 +108,8 @@ A. 6 3 6  B. 6 3 9  C. 6 3 3  D. 3 6 3
 19            C++;	
 20            if(c==n)	
 21            { 
-22	             printf("%d",i);	
-23	             return 0:	
+22               printf("%d",i);	
+23               return 0:	
 24            }  
 25         }
 26     }
