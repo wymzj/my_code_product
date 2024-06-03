@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int a,b;
+cin>>a>>b;        //键盘输入值
+cout<<a<<b<<endl; //输出变量
+
+#include <stdio>
+
+char c = getchar(); // 获得输入的一个字符 
+int i = getchar();  // 字符转成ASCII值
+
+
+#include <cstdio>
+
+%c ：字符。
+%d ：整数。
+%f ： float 类型浮点数。
+%lf ： double 类型浮点数。
+%Lf ： long double 类型浮点数。
+%s ：字符串。
+%[]：在⽅括号中指定⼀组匹配的字符（⽐如 %[0-9] ），遇到不在集合之中的字符，匹配将会停⽌
+
+int i, l;
+scanf("%d",&i); 
+scanf("%d %d",&i,&l); //注意有空格
+
+char s[10] = {0};
+scanf("%s",s);   //注意不要加&地址符号，因为s就是地址。
+scanf("%s",s[0]); //错误
+
+char s[10] = {0};
+char r[10] = {0};
+sscanf("shjf sfk","%s %s",s,r); //按约定格式解析字符串
+
+int a,b;
+sscanf("123 456","%d %d", &a, &b); //把字符串解析为数字
