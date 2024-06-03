@@ -1,24 +1,41 @@
 #define N 100
 
-void push(int s[], int* top, int* x)
+void push(int s[], int& top, int x)
 {
-    if(*top == N) 
-        printf("overflow")
+    if (top == N)
+        printf("overflow");
     else
     {
-       *top++;
-       s[*top] = *x;
+        s[top] = x;
+        top++;
     }
 }
 
-void push(int s[], int* top, int* x)
+void pop(int s[], int& top, int& y)
 {
-    if(*top == N) 
-        printf("overflow")
+    if (top == 0)
+        printf("underflow");
     else
     {
-       *top++;
-       s[*top] = *x;
+        y = s[top-1];
+        top--;
     }
+}
+
+int main() {
+
+    int s[N] = { 0 };
+    int top = 0;
+
+    push(s, top, 22);
+    push(s, top, 33);
+
+    int out_stack;
+    pop(s,top, out_stack);
+    cout<<out_stack<<endl;
+
+    pop(s, top, out_stack);
+    cout << out_stack << endl;
+    return 0;
 }
 
