@@ -54,7 +54,7 @@ init_i = 0;
 do {
     std::cout << init_i << std::endl;
     init_i++;
-} while (init_i < 10);  //至少执行一次
+} while (init_i < 10);  //至少执行一次,注意后面有个分号结束。
 
 int day = 3;
 
