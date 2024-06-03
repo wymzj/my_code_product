@@ -1,0 +1,24 @@
+#define N 100
+
+void push(int s[], int* top, int* x)
+{
+    if(*top == N) 
+        printf("overflow")
+    else
+    {
+       *top++;
+       s[*top] = *x;
+    }
+}
+
+void push(int s[], int* top, int* x)
+{
+    if(*top == N) 
+        printf("overflow")
+    else
+    {
+       *top++;
+       s[*top] = *x;
+    }
+}
+
