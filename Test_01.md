@@ -62,17 +62,33 @@ A.501  B.502  c.1001  D.1002
 01 include<iostream>
 02 using namespace std;
 03
-04 const int maxn=100001;\
+04 const int maxn=100001;
 05
-06 int NM,K;07 int x[maxn],y[maxn],d[maxn];int c[maxn];
-08
-09int *a[ maxn];
+06 int NM,K;
+07 int x[maxn],y[maxn],d[maxn];
+08 int c[maxn];
+09 int *a[maxn];
 10 
-1121 31415161718192021222324252627282930
-int main(){cin>>N>>M>>K;for(int i=0;i<K;++i){cin>>x[1]>>y[1]>>d[i];//表示第x[]行第y[i]列的值为 d[i]c[ y[ i]]++;
-for(inti-l;i<=M;++1)a[i]=new int[c[i]];for(int i-0;i<K;++í)(*a[ y[ i]]-d[ i];a[ y[i]]++;
-for(int i-l;i<=M;++i){a[i]-a[1]-c[1];for(int j-0;j<c[i];++j,++a[i])cout<<*a[ i]<<'";
-return 0;
+11 int main(){
+12   cin>>N>>M>>K;
+13   for(int i=0;i<K;++i){
+14     cin>>x[1]>>y[1]>>d[i];//表示第x[]行第y[i]列的值为 d[i]
+15     c[y[i]]++;
+16   }
+17   for(inti-l;i<=M;++1)
+18     a[i]=new int[c[i]];
+19   for(int i-0;i<K;++í){
+20     *a[y[ i]]-d[i];
+21     a[y[i]]++;
+22   }
+23
+24   for(int i-l;i<=M;++i){
+25     a[i]-a[1]-c[1];
+26     for(int j-0;j<c[i];++j,++a[i])
+27       cout<<*a[ i]<<'";
+28   }
+29   return 0;
+30 }
 ```
 第六章 提高级CSP-S新题型初赛模拟试题
 ●判断题
