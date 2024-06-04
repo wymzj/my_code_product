@@ -58,16 +58,22 @@ A.0(1)  B.0(log，n) C.0(n) D.0(n* log,n)
 A.501  B.502  c.1001  D.1002
 
 二、阅读程序(程序输人不超过数组或字符串定义的范围,判断题正确的打V，错误的打x:除特殊说明外,判断题每题15分,选择题每题4分,共计40分)
-"""
+'''
 01 include<iostream>
 02 using namespace std;
 03
-04 const int maxn=100001;0506 int NM,K;07 int x[maxn],y[maxn],d[maxn];int c[ maxn];0809int *a[ maxn];101 1121 31415161718192021222324252627282930
+04 const int maxn=100001;\
+05
+06 int NM,K;07 int x[maxn],y[maxn],d[maxn];int c[maxn];
+08
+09int *a[ maxn];
+10 
+1121 31415161718192021222324252627282930
 int main(){cin>>N>>M>>K;for(int i=0;i<K;++i){cin>>x[1]>>y[1]>>d[i];//表示第x[]行第y[i]列的值为 d[i]c[ y[ i]]++;
 for(inti-l;i<=M;++1)a[i]=new int[c[i]];for(int i-0;i<K;++í)(*a[ y[ i]]-d[ i];a[ y[i]]++;
 for(int i-l;i<=M;++i){a[i]-a[1]-c[1];for(int j-0;j<c[i];++j,++a[i])cout<<*a[ i]<<'";
 return 0;
-"""
+'''
 第六章 提高级CSP-S新题型初赛模拟试题
 ●判断题
 (1)程岸第09行定义子一个指针数组,a[日表示第列的指针。()(2)第20行代码改成司y日][0]=d门不影响运算结果。((3)第15行中,数组e用来统计每行中的数据个数。(
