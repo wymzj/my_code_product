@@ -57,7 +57,7 @@ A.501  B.502  c.1001  D.1002
 
 二、阅读程序(程序输人不超过数组或字符串定义的范围,判断题正确的打V，错误的打x:除特殊说明外,判断题每题15分,选择题每题4分,共计40分)
 ```
-01 include<iostream>
+01 include <iostream>
 02 using namespace std;
 03
 04 const int maxn=100001;
@@ -102,13 +102,13 @@ A.O(MNK)  B.O(M+K)  C.O(M+N) D.O(K)
 (6)该程序的空间复杂度为()<br>
 A O(M+K) B.O(NK) C.O(M+N) D.O(MN)
 ```
-0l include iostrsam>
-02 include<iemanip>
-03  using namespace std;
+0l include <iostream>
+02 include <iomanip>
+03 using namespace std;
 04
 05 int m[101][101];
 06
-07 int main()(
+07 int main(){
 08   int a；
 09   cin>>a;
 10
