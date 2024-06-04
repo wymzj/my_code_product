@@ -133,7 +133,7 @@ A O(M+K) B.O(NK) C.O(M+N) D.O(MN)
 29     }
 30   }
 31   for(int i=l;i<=a;i++){
-32     for(nt j=l;<=a;j++)
+32     for(int j=l;<=a;j++)
 33       cout<<setw (5)<<m[i][j];
 34     cout<<endl;
 35   }
