@@ -112,7 +112,7 @@ A O(M+K) B.O(NK) C.O(M+N) D.O(MN)
 08   int a；
 09   cin>>a;
 10
-11   int e=a*a,1=1,k=(a+1)/2;
+11   int c=a*a,1=1,k=(a+1)/2;
 12   for(int j=1;j<=C;j++)(
 13     m[i][k]=j;
 14     if(j%a == 0)(
