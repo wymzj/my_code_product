@@ -56,6 +56,12 @@ catch (...)
 
 }
 
+void (*function) (int) throw(Touble, Moretouble);  //正确
+typedef void (*function) (int) throw(Touble, Moretouble);  //错误，因为异常不是类型的一部分
+
+typedef void (*function) (int);   //正确
+function pFunction throw(Touble, Moretouble)  //只能在声明中包含异常说明
+
 //---------------------异常函数结束
 int main()
 {
