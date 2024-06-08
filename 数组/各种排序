@@ -161,6 +161,9 @@ void qsort(int l,int r)
 6.堆排序
 https://blog.csdn.net/qq_51950769/article/details/122677635
 
+7.希尔排序
+https://blog.csdn.net/weixin_45490198/article/details/130455972
+
 
 
 
