@@ -263,9 +263,9 @@ A.a[s]=0;		B.f(s-1);	C.a[s]=i;	D.b[i]=0;
 05 #define N 1001
 06 using namespace std;
 07 int n,m,x,y;
-08 vector<int>G[N];
-09 stack<int>q;
-10 int ent[N],tpc;
+08 vector<int> G[N];
+09 stack<int> q;
+10 int cnt[N],tpc;
 11 bool pd()
 12 {
 13    for(int i-1;1<-n;1++)	
@@ -296,15 +296,15 @@ A.a[s]=0;		B.f(s-1);	C.a[s]=i;	D.b[i]=0;
 38       G[x].push_back(y);	
 39       _____⑤
 40    }
-41    if (pd ()) cout<<"存在有向环";	
+41    if (pd()) cout<<"存在有向环";	
 42    else cout<<"不存在有向环";	
 43 }
 
 39.①处应填()。
-A.!ent[i]	B.cnt[i]	C.cnt[i] =0	D.cnt[i]==1	
+A.!cnt[i]	B.cnt[i]	C.cnt[i] =0	D.cnt[i]==1	
 
 40.②处应填()。
-A. q. push(v);	B.q.pop( );	C.cnt[u]--;	D.cnt[v]--:	
+A. q.push(v);	B.q.pop( );	C.cnt[u]--;	D.cnt[v]--:	
 
 41.③处应填( )。
 A. q. pop( ) ;	B. q.push(v);	C.tpe--:	D.tpe++:	
