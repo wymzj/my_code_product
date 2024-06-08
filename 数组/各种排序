@@ -158,6 +158,8 @@ void qsort(int l,int r)
     if (l<j)  qsort(l,j);        //若未到两个数的边界，则递归搜索左右区间
     if (i<r)  qsort(i,r);
 }
+6.堆排序
+https://blog.csdn.net/qq_51950769/article/details/122677635
 
 
 
