@@ -27,12 +27,12 @@ int main()
   int n,k,i,j;
   float temp,a[MAXN];
   cin>>n;
-  for (i=1;i<=n;i++)
+  for (i=0;i<n;i++)
     cin>>a[i];                   //输入n个数 
-  for (i=1;i<=n;i++)           //i控制当前序列中最小值存放的数据位置 
+  for (i=0;i<n;i++)           //i控制当前序列中最小值存放的数据位置 
   {
     k=i;
-    for (j=i+1;j<=n;j++)       //在当前无序区a[i..n]中选最小的元素a[k]
+    for (j=i+1;j<n;j++)       //在当前无序区a[i..n]中选最小的元素a[k]
       if (a[j]<a[k])  k=j;
     if (k!=i)                  //交换a[i]和a[k]，将当前最小值放到a[i]位置 
     {
@@ -41,7 +41,7 @@ int main()
       a[k]=temp;
     }
   }
-  for (i=1;i<=n;i++)
+  for (i=0;i=n;i++)
       cout<<a[i]<<" ";
   return 0;
 }
@@ -55,11 +55,11 @@ int main()
   int n,i,j;
   float temp,a[MAXN];
   cin>>n;
-  for (i=1;i<=n;i++)
+  for (i=0;i<n;i++)
     cin>>a[i];             //输入n个数 
   for(i=n; i>1; i--)     //进行n-1轮冒泡
   {
-    for(j=1; j<i; j++)        //每轮进行i次的比较
+    for(j=0; j<i; j++)        //每轮进行i次的比较
     {
       if(a[j]>a[j+1])       //相邻两个元素比较，若逆序就交换
         swap(a[j], a[j+1]); //交换
@@ -88,21 +88,21 @@ int main()
     int n,i,j,k;
     float temp,a[MAXN];
     cin>>n;
-    for (i=1;i<=n;i++)
+    for (i=0;i<n;i++)
           cin>>a[i];                         //输入n个数 
     for(i=1; i<=n; i++)
     { 
-       for(j=i-1; j>=1; j--)                 //在前面有序区间中为a[i]找合适的插入位置 
-           if (a[j]<=a[i]) break;            //找到比a[i]小的位置就退出,插入其后 
+       for(j=i-1; j>=0; j--)                 //在前面有序区间中为a[i]找合适的插入位置 
+           if(a[j]<=a[i]) break;            //找到比a[i]小的位置就退出,插入其后 
        if (j!=i-1)
        {
-             temp=a[i];                      //将比a[i]大的数据向后移 
-             for(k=i-1;k>j;k--)
-                   a[k+1]=a[k];              //将a[i]放在正确位置上 
-             a[k+1]=temp;
+           temp=a[i];                      //将比a[i]大的数据向后移 
+           for(k=i-1;k>j;k--)
+               a[k+1]=a[k];                //将a[i]放在正确位置上 
+           a[k+1]=temp;
        }
     }
-    for (i=1;i<=n;i++)
+    for (int i=1;i<n;i++)
          cout<<a[i]<<" ";                    //输出排序的结果 
     return 0; 
 }
