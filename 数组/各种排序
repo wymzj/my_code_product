@@ -28,7 +28,7 @@ int main()
   float temp,a[MAXN];
   cin>>n;
   for (i=1;i<=n;i++)
-  cin>>a[i];                   //输入n个数 
+    cin>>a[i];                   //输入n个数 
   for (i=1;i<=n;i++)           //i控制当前序列中最小值存放的数据位置 
   {
     k=i;
@@ -42,7 +42,7 @@ int main()
     }
   }
   for (i=1;i<=n;i++)
-  cout<<a[i]<<" ";
+      cout<<a[i]<<" ";
   return 0;
 }
 
@@ -66,7 +66,7 @@ int main()
     }
   }
   for (i=1;i<=n;i++)           //输出排序结果
-  cout<<a[i]<<" ";
+      cout<<a[i]<<" ";
   return 0; 
 }
 
