@@ -19,7 +19,7 @@ a ^= b;    //a=(a^b)^a=a^b^a=a^a^b=0^b=b
 最后排序结果 13 27 38 49 49 65 76  97 
 
 程序如下：
-#include<iostream>
+#include <iostream>
 using namespace std;
 const int MAXN=10001;
 int main()
