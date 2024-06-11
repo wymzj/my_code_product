@@ -8,9 +8,9 @@ using namespace std;
 
 struct Node
 {
-	Node* privious;
-	Node* next;
-	float content;
+    Node* privious;
+    Node* next;
+    float content;
 };
 
 Node* pHead = NULL;  //链表头部的结点
