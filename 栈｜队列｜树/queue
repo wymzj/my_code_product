@@ -1,0 +1,79 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+#define N 100
+
+struct Node
+{
+	Node* privious;
+	Node* next;
+	float content;
+};
+
+Node* pHead = NULL;  //链表头部的结点
+Node* pTail = NULL;  //链表尾部的结点 
+void push(Node& node)
+{
+   if(pTail==NULL && pHead==NULL)
+   {
+	     pHead = &node;
+	     pTail = &node;
+	     node.privious = NULL;
+	     node.next = NULL;
+   }
+	 else
+	 {
+	 	    node.next = NULL;
+	 	    node.privious = pTail;
+	 	    pTail->next = &node;
+	 	    pTail = &node;
+	 }	
+}
+
+Node* pop()
+{
+    if (pTail==NULL && pHead==NULL) 
+		return NULL;
+    else
+    {
+      	Node* ptemp = pHead;
+      	if(pHead->next) 
+  			    pHead->next->privious=NULL;
+        pHead = pHead->next;
+        return ptemp;
+    }
+}
+
+void insert(int positon, Node& node)
+{
+  	Node* ptemp = pHead;
+  	for(int i=0; i<positon;i++)
+  	    if(ptemp->next)	ptemp = ptemp->next;
+  	ptemp->privious->next = &node;
+  	node.privious= ptemp->privious;	
+  	ptemp->privious = &node;
+  	node.next = ptemp;
+}
+
+int main() {
+    
+  Node a1, a2, a3, a4;
+  a1.content = 1;
+  a2.content = 2;
+  a3.content = 3;
+  a4.content = 4;
+  push(a1);
+  push(a2);
+  push(a3);
+  insert(1,a4);
+  Node* b1 = pop();
+  cout<<b1->content<<endl;
+  Node* b2 = pop();
+	cout<<b2->content<<endl;
+	Node* b3 = pop();
+	cout<<b3->content<<endl;
+	Node* b4 = pop();
+	cout<<b4->content<<endl;
+  return 0;
+}
