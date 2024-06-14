@@ -33,7 +33,7 @@ int main()
   {
     k=i;
     for(j=i+1;j<n;j++)       //在当前无序区a[i..n]中选最小的元素a[k]
-      if(a[j]<a[k])  k=j;
+       if(a[j]<a[k])  k=j;
     if(k!=i)                  //交换a[i]和a[k]，将当前最小值放到a[i]位置 
     {
         temp=a[i];
@@ -41,7 +41,7 @@ int main()
         a[k]=temp;
     }
   }
-  for (i=0;i=n;i++)
+  for(i=0;i=n;i++)
       cout<<a[i]<<" ";
   return 0;
 }
