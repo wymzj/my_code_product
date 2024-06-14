@@ -1,5 +1,5 @@
 0.数据交换异或法
-swap(int& a,int& b)
+void swap(int& a,int& b)
 {
     a ^= b;    //a=a^b
     b ^= a;    //b=b^(a^b)=b^a^b=b^b^a=0^a=a
