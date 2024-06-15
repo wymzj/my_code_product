@@ -36,3 +36,20 @@ sscanf("shjf sfk","%s %s",s,r); //按约定格式解析字符串
 
 int a,b;
 sscanf("123 456","%d %d", &a, &b); //把字符串解析为数字
+
+struct A
+{
+    int age;
+	  int nation;	
+};
+
+std::ostream& operator<<(std::ostream& out, const A& a) {
+        out << "(" << a.age << " - " << a.nation << ")";
+        return out;
+    }
+
+int main() {
+	A tempA;
+    cout<<tempA<<endl;
+    return 0;
+}
