@@ -11,6 +11,12 @@ cout<<a<<b<<endl; //输出变量
 char c = getchar(); // 获得输入的一个字符 
 int i = getchar();  // 字符转成ASCII值
 
+string word;
+char str[10];
+cin >> word;
+cin.get(str,10);
+cout << "You entered: " << word <<str<< endl;
+
 
 #include <cstdio>
 
