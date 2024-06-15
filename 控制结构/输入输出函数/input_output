@@ -43,7 +43,7 @@ struct A
     int nation;	
 };
 
-std::ostream& operator<<(std::ostream& out, const A& a) {
+std::ostream& operator<<(std::ostream& out, const A& a) {    //重载输入输出流
      out << "(" << a.age << " - " << a.nation << ")";
      return out;
 }
