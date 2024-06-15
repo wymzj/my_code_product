@@ -44,12 +44,12 @@ struct A
 };
 
 std::ostream& operator<<(std::ostream& out, const A& a) {
-        out << "(" << a.age << " - " << a.nation << ")";
-        return out;
-    }
+     out << "(" << a.age << " - " << a.nation << ")";
+     return out;
+}
 
 int main() {
-	A tempA;
+    A tempA;
     cout<<tempA<<endl;
     return 0;
 }
