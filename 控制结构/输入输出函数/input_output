@@ -40,7 +40,7 @@ sscanf("123 456","%d %d", &a, &b); //把字符串解析为数字
 struct A
 {
     int age;
-	  int nation;	
+    int nation;	
 };
 
 std::ostream& operator<<(std::ostream& out, const A& a) {
