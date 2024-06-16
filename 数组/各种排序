@@ -144,19 +144,23 @@ void qsort(int l,int r)
        while(a[j]>mid) j--;     //在右半部分寻找比中间数小的数
        if(i<=j) 
        {                        //若找到一组与排序目标不一致的数对则交换它们
-            p=a[i];
-            a[i]=a[j];
-            a[j]=p;
+            if(i != j)
+	   ｛
+            	p=a[i];
+            	a[i]=a[j];
+            	a[j]=p;
+            ｝
             i++; j--;           //继续找
        }
     }
     while (i<=j);                //注意这里不能少了等号
+
     if (l<j) qsort(l,j);         //若未到两个数的边界，则递归搜索左右区间
     if (i<r) qsort(i,r);
 }
 int main()
 {
-	  int len = sizeof(a)/sizeof(a[0]);
+    int len = sizeof(a)/sizeof(a[0]);
     qsort(0,len-1);
     for(int i=0;i<len;i++)
     	cout<<a[i]<<" ";
