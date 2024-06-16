@@ -213,8 +213,12 @@ int main() {
 
 7.希尔排序
 https://blog.csdn.net/weixin_45490198/article/details/130455972
+暂无代码
 
 8.归并排序
+一、归并排序的时间复杂度为O(N*log2N)，因为向下递归的复杂度为O(log2N)，然后遍历一遍数组的复杂度为O(N)，所以总的时间复杂度为O(N*log2N)
+二、归并排序的空间复杂度为O(N)，因为需要创建一个tmp辅助数组用来存归并后的序列。
+
 #include <iostream>
 using namespace std;
 
