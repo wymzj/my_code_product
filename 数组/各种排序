@@ -112,7 +112,7 @@ https://blog.csdn.net/2301_79794141/article/details/135793829
 using namespace std;
 int main()
      int b[101],n,i,j,k;
-     memset(b,0,sizeof(b));             //初始化
+     memset(b,0,sizeof(b));                  //初始化
      cin>>n;
      for (i=1;i<=n;i++)
      {
@@ -224,7 +224,7 @@ https://blog.csdn.net/weixin_45490198/article/details/130455972
 using namespace std;
 
 const int N = 30;
-int a[100] ={49,74,52,32,25,58,77,62,42,42,68,46,8,15,14,48,38,40,43,55,72,44,88,20,67,0,42,67,85,33};
+int a[N] ={49,74,52,32,25,58,77,62,42,42,68,46,8,15,14,48,38,40,43,55,72,44,88,20,67,0,42,67,85,33};
 
 int main() 
 {
