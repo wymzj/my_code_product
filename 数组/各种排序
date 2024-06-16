@@ -217,7 +217,37 @@ int main() {
 
 7.希尔排序
 https://blog.csdn.net/weixin_45490198/article/details/130455972
-暂无代码
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+const int N = 30;
+int a[100] ={49,74,52,32,25,58,77,62,42,42,68,46,8,15,14,48,38,40,43,55,72,44,88,20,67,0,42,67,85,33};
+
+int main() 
+{
+    for(int gap = N/2;gap >= 1;gap/=2)//希尔排序
+    {
+        for(int i=gap;i < N;++i)
+        {
+            int tmp=a[i];
+            int Mark=i;
+            while(Mark >= gap && a[Mark-gap] > tmp)
+            {
+                a[Mark] = a[Mark-gap];
+                Mark -= gap;
+            }
+            a[Mark] = tmp;
+        }
+    }    
+
+    for (int i = 0; i < N; i++)
+        cout << a[i] << " ";
+
+    return 0;
+}
 
 8.归并排序
 一、归并排序的时间复杂度为O(N*log2N)，因为向下递归的复杂度为O(log2N)，然后遍历一遍数组的复杂度为O(N)，所以总的时间复杂度为O(N*log2N)
