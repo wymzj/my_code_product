@@ -214,6 +214,49 @@ int main() {
 7.希尔排序
 https://blog.csdn.net/weixin_45490198/article/details/130455972
 
+8.归并排序
+#include <iostream>
+using namespace std;
+
+int a[10] = {1,8,9,2,0,3,7,2,67,21};
+int b[10] = {0};
+//将数组a[]从l到r的位置进行归并排序
+void mergeSort(int l, int r)
+{
+  //当[l...r]中只有一个数时或没有数时，递归结束
+  if(l >= r) return;
+  int mid = (l + r) / 2; //找到中间位置
+  
+  //分成两个部分，对这两个部分分别进行归并排序
+  mergeSort(l, mid); 
+  mergeSort(mid + 1, r);
+  
+  //i是第一部分左边的哨兵，j是第二部分左边的哨兵
+  int i = l, j = mid + 1, k = l; //k表示合并后放入b数组的位置
+  //哨兵没有走到头
+  while(i <= mid && j <= r)
+  {
+	if(a[i] <= a[j]) b[k ++] = a[i ++]; //将较小的a[i]合并到b数组中
+   	else b[k ++] = a[j ++];//将较小的a[j]合并到b数组中
+  }
+  while(i <= mid) b[k++] = a[i++]; //将左边剩余元素合并到b数组
+  while(j <= r) b[k++] = a[j++]; //将右边剩余元素合并到b数组
+  //将b数组拷贝回a数组
+  for(int i = l; i <= r; i ++) 
+     a[i] = b[i];  
+}
+
+int main()
+{
+   int n = 10;
+   //将数组a[]从1到n的位置进行归并排序
+   mergeSort(1, n);  
+   for(int i = 1; i <= n; i ++)
+      cout << a[i] << " ";
+   return 0;
+}
+
+
 
 
 
