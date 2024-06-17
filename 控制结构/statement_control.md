@@ -83,15 +83,15 @@ default:     //如果其它条件都不满足就执行该条件。
     std::cout << "Another day" << std::endl;
 }
 ```
-C++信奥赛必会程序语法 
-1、数据类型：
-Int 短整型
-float 点浮点小数
-double 双浮点小数
-bool 布尔型变量【true非0｜false  0】
-char 字符类型
-const int 固定短整型变量
-unsigned int 无符号类型短整型，也就是没有正负之分
+
+1、数据类型：<br>
+Int 短整型<br>
+float 点浮点小数<br>
+double 双浮点小数<br>
+bool 布尔型变量【true非0｜false  0】<br>
+char 字符类型<br>
+const int 固定短整型变量<br>
+unsigned int 无符号类型短整型，也就是没有正负之分<br>
 
 2、多行注释符
 ```
