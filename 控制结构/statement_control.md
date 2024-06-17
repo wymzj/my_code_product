@@ -1,5 +1,5 @@
-//判断语句
-//第一种
+判断语句
+第一种
 ```
 if (判断条件)
 {
@@ -35,7 +35,7 @@ else
 }
 ```
 
-//for循环
+for循环
 ```
 for (int i = 0; i < 10; i++) {
     std::cout << i << std::endl;
@@ -56,8 +56,8 @@ while (init_i < 10) {
     std::cout << init_i << std::endl;
     init_i++;
 }
-//在while循环中有时会有continue立即执行新的循环和break跳出循环语句
-//while(True)  for(;;)   无限循环 
+在while循环中有时会有continue立即执行新的循环和break跳出循环语句
+while(True)  for(;;)   无限循环 
 
 init_i = 0;
 do {
@@ -66,7 +66,7 @@ do {
 } while (init_i < 10);  //至少执行一次,注意后面有个分号结束。
 ```
 
-//条件选择语句
+条件选择语句
 ```
 int day = 3;
 switch (day) {
@@ -83,7 +83,7 @@ default:     //如果其它条件都不满足就执行该条件。
     std::cout << "Another day" << std::endl;
 }
 ```
- C++信奥赛必会程序语法 
+C++信奥赛必会程序语法 
 1、数据类型：
 Int 短整型
 float 点浮点小数
@@ -96,8 +96,8 @@ unsigned int 无符号类型短整型，也就是没有正负之分
 2、多行注释符
 ```
 /*
-	语句1
-   语句2
+   注释语句1
+   注释语句2
 */
 ```
 
