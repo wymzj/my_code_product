@@ -203,7 +203,7 @@ switch (day) {
 ```
 struct  my_s
 {
-	int a;
+    int a;
     float b;
     char str[100];
 }
