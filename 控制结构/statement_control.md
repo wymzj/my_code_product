@@ -50,14 +50,13 @@ for (int i = 0; i < 10; i=i+2) {
 }
 ```
 while循环语句：
+在while循环中有时会有continue立即执行新的循环和break跳出循环语句。for(;;)等同于while(True)无限循环 
 ```
 int init_i = 0;
 while (init_i < 10) {
     std::cout << init_i << std::endl;
     init_i++;
 }
-在while循环中有时会有continue立即执行新的循环和break跳出循环语句
-while(True)  for(;;)   无限循环 
 
 init_i = 0;
 do {
