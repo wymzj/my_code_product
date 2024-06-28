@@ -93,9 +93,23 @@ private:
 };
 
 //纯虚类
+class VA   //纯虚函数虚类 不能被直播实例化 也就是仅能被继承
+{
+public:
+    virtual void methodA() = 0;  //纯虚函数  定义了一个接口
+    virtual void methodB() = 0;
+};
+class VB :public  VA
+{
+public:
+     void methodA(){ } //子类方法必须重写方法
+     void methodB(){ }
+};
+
+//纯虚类析构函数的处理
 class AbstractClass {
 public:
-        //virtual ~AbstractClass()=0; 
+        virtual ~AbstractClass()=0; 
 	virtual void interfaceFunction() = 0;
 	// 可以有多个纯虚函数
 	virtual void anotherInterfaceFunction() = 0;
@@ -103,7 +117,8 @@ public:
 	int commonVariable;
 	void commonFunction();
 };
-//AbstractClass::~AbstractClass(){}  // 纯虚函数的定义必须在类外实现
+AbstractClass::~AbstractClass(){}  // 纯虚函数的定义必须在类外实现
+
 int main()
 {
 	Box box(2.3,3.3,3.4);
