@@ -185,9 +185,9 @@ void QuickSort(int a[],int low,int high){
     int j = high;
     int key = a[low];
     while(i<j){
-        while(i<j && key<a[j]) j--;
+        while(i<j && key <= a[j]) j--;
         a[i] = a[j];
-        while(i<j && key>a[i]) i++;
+        while(i<j && key >= a[i]) i++;
         a[j] = a[i];
     }
     a[i] = key;
@@ -196,7 +196,7 @@ void QuickSort(int a[],int low,int high){
 }
 int main(){
     int a[]={3,5,8,2,9,1};
-    int num 6;
+    int num = 6;
     QuickSort(a,0,num-1);
     for(int i = 0;i<num;i++)
         cout<<a[i]<<" ";
