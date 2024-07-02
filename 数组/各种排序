@@ -141,7 +141,7 @@ int main()
 三、一趟快速排序的具体做法是：附设两个指针i和j，它们的初值分别为L和R，设枢轴记录取mid，则首先从j所指位置起向前搜索找到第一个关键字小于的mid的记录，然后从i所指位置起向后搜索，找到第一个关键字大于mid的记录，将它们互相交换，重复这两步直至i>j为止。
 四、快速排序的时间的复杂性是O(nlog2n)，速度快,但它是不稳定的排序方法。就平均时间而言，快速排序是目前被认为是最好的一种内部排序方法
 五、由以上讨论可知，从时间上看，快速排序的平均性能优于前面讨论过的各种排序方法，但快速排序需一个栈空间来实现递归。若每一趟排序都将记录序列均匀地分割成长度相接近的两个子序列，则栈的最大深度为log(n+1)。
-
+第一种算法：
 void qsort(int l,int r)
 {  
     int i,j,mid,p;
@@ -174,6 +174,33 @@ int main()
     for(int i=0;i<len;i++)
     	cout<<a[i]<<" ";
     return 0; 
+}
+
+第二种算法：
+#include<iostream>
+using namespace std;
+void QuickSort(int a[],int low,int high){
+    if(low>=high) return;
+    int i = low;
+    int j = high;
+    int key = a[low];
+    while(i<j){
+        while(i<j && key<a[j]) j--;
+        a[i] = a[j];
+        while(i<j && key>a[i]) i++;
+        a[j] = a[i];
+    }
+    a[i] = key;
+    QuickSort(a,low,i-1);
+    QuickSort(a,i+1,high);
+}
+int main(){
+    int a[]={3,5,8,2,9,1};
+    int num 6;
+    QuickSort(a,0,num-1);
+    for(int i = 0;i<num;i++)
+        cout<<a[i]<<" ";
+    return 0;
 }
 
 6.堆排序
