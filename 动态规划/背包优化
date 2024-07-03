@@ -1,0 +1,35 @@
+动态规划（Dynamic Programming, DP）和背包（Knapsack）问题是算法领域的一个经典组合。这两种算法通常用于在特定的条件和约束下，寻找如何最优地分配或使用有限的资源。
+以下是一个简单的0-1背包问题的C++实现示例：
+假设我们有n个物品和一个容量为W的背包。每个物品只有一个，且其体积为v[i]，价值为w[i]。
+
+#include <iostream>
+#include <vector>
+ 
+using namespace std;
+ 
+void knapsack(int W, vector<int> v, vector<int> w, vector<vector<int>>& dp) {
+    int n = v.size();
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= W; j++) {
+            if (i == 0) {
+                dp[i][j] = 0;
+            } else if (j < v[i-1]) {
+                dp[i][j] = dp[i-1][j];
+            } else {
+                dp[i][j] = max(dp[i-1][j], dp[i-1][j-v[i-1]] + w[i-1]);
+            }
+        }
+    }
+}
+ 
+int main() {
+    int W = 10; // 背包容量
+    vector<int> v = {0, 3, 4, 5}; // 物品体积
+    vector<int> w = {0, 4, 5, 6}; // 物品价值
+    vector<vector<int>> dp(v.size()+1, vector<int>(W+1, 0));
+    knapsack(W, v, w, dp);
+    cout << "最大价值: " << dp[v.size()][W] << endl;
+    return 0;
+}
+这个代码定义了一个knapsack函数，它使用二维数组dp来存储中间结果，并最终计算出在给定容量W下的最大价值。在main函数中，我们初始化了背包容量W和对应的物品体积和价值，然后调用knapsack函数并输出结果。
+这个示例是0-1背包问题的简化版，其中每个物品只能使用一次。如果你需要处理更复杂的动态规划背包问题，可能需要根据具体问题调整代码。
