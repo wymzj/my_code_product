@@ -30,12 +30,13 @@ int main()
   cin>>n;
   for (i=0;i<n;i++)
     cin>>a[i];                   //输入n个数 
-  for(i=0;i<n;i++)           //i控制当前序列中最小值存放的数据位置 
+  for(i=0;i<n;i++)               //i控制当前序列中最小值存放的数据位置 
   {
     k=i;
-    for(j=i+1;j<n;j++)       //在当前无序区a[i..n]中选最小的元素a[k]
-       if(a[j]<a[k])  k=j;
-    if(k!=i)                  //交换a[i]和a[k]，将当前最小值放到a[i]位置 
+    for(j=i+1;j<n;j++)           //在当前无序区a[i..n]中选最小的元素a[k]
+       if(a[j]<a[k])  
+           k=j;
+    if(k!=i)                     //交换a[i]和a[k]，将当前最小值放到a[i]位置 
     {
         temp=a[i];
         a[i]=a[k];
