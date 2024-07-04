@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+bool is_prime(int n){  //优化做法O(sqrt(n))
+    bool flag = true;
+    for(int i = 2;i<=n/i;i++){
+ 	      cout<<i<<endl;
+  	if(n%i==0){
+  	   flag = false;
+  	   break;
+  	}
+ }
+ return flag;
+}
+
+int main()
+{
+  	cout<<is_prime(13)<<endl;
+  	return 0;
+}
