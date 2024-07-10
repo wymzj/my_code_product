@@ -1,3 +1,4 @@
+//重定向版
 #include <cstdio>
 
 int main()
@@ -48,5 +49,26 @@ int main() {
 	for(int i=0;i<N;i++)
 	    cout<<a[i]<<" ";
 	fclose(stdout);
+	return 0;
+}
+//fopen
+int main()
+{
+	FILE *fin,*fout;
+
+	fout=fopen("csp.txt","wb");
+	int temp,sum=0;
+	for(int i=1; i<=N; i++)
+	    fprintf(fout,"%d ",i);         //写入文件
+	    
+	fclose(fout);
+	fin=fopen("csp.txt","rb");
+	while(fscanf(fin,"%d",&temp)==1)   //从输入文件中读入数据
+	{
+	    cout<<temp<<endl;
+	    sum += temp;
+	}
+	cout<<sum<<endl;
+	fclose(fin);
 	return 0;
 }
