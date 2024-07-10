@@ -25,30 +25,28 @@ int main()
 }
 
 #include <iostream>
-
 using namespace std;
+
 const int N=10;
 int main() {
-
 	freopen("csp.out","w",stdout);   //以标准流写入的方式打开文件
 	int temp = 0;
 	for(int i=0;i<N;i++)
 	{
-		temp++;
-		cout<<temp<<" ";
+	    temp++;
+	    cout<<temp<<" ";             //printf同样
 	}
 	int a[N]={0};
 	
 	freopen("csp.out","r",stdin);     //以标准流读入的方式打开文件
 	for(int i=0;i<N;i++)
-		cin>>a[i];
+	    cin>>a[i];                    //scanf同样
 		
 	fclose(stdin);
 	fclose(stdout);
 	freopen("CON","w",stdout);       //CON表示控制台，表示重新定向到控制台。      
 	for(int i=0;i<N;i++)
-		cout<<a[i]<<" ";
+	    cout<<a[i]<<" ";
 	fclose(stdout);
-	
 	return 0;
 }
