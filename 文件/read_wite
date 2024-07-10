@@ -72,3 +72,33 @@ int main()
 	fclose(fin);
 	return 0;
 }
+
+文件输入输出流
+设备都是磁盘文件。C+十可以在创建对象时,设定输人或输出到哪个文件。由于这些定义是在fstream中进行的,因此,在使用这此类进行输入输出操作时,必须要在程序的利用#include指令包进fstream头文件。
+例如:若想用fin作为输入对象,fout作为输出对象,则可以使用如下定义:
+ifstream fin("输人文件名.扩展名");
+ofstream fout("输出文件名.扩展名");
+如果想再次使用cin和cout,是否要逐个把程序中的所有fin和fout替换为cin用这么麻烦,只需要把fin和fout的声明语句去掉,并加上这样两行即可:
+#define fin cin
+#define fout cout
+用条件编译,还可以让程序在本机上读写标准输入输出,比赛测试时读写文件。
+程序如下:
+
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    //使用文件输入输出流,对cin、cout语法
+    ifstream fin("in.txt");//定义输入文件名
+    ofstream fout("out.txt");//定义输出文件名
+    int temp,sum=0;
+    while(fin>>temp)
+        sum=sum+temp;//从输入文件中读入数据
+    fout<<sum<<endl;
+    fin.close();
+    fout.close();//关闭文件,可省略
+    cout<<"original IO"<<endl;
+    return 0;
+}
