@@ -17,13 +17,13 @@ void init(){//初始化
 	cin>>n>>m;
 	cout<<"请输入"<<m<<"条边："<<endl;
 	for(int i=0;i<m;i++){
-		cout<<"    输入第"<<i+1<<"条边："<<endl;
-		int x,y,val; 
-		cin>>x>>y>>val;
-		x--;
-		y--;
-		a[x][y]=val;
-		a[y][x]=val;
+	    cout<<"    输入第"<<i+1<<"条边："<<endl;
+	    int x,y,val; 
+	    cin>>x>>y>>val;
+	    x--;
+	    y--;
+	    a[x][y]=val;
+	    a[y][x]=val;
 	}
 } 
 
@@ -31,18 +31,18 @@ void init(){//初始化
 void run(){//dp核心算法 
 	t=(1<<n);
 	for(int i=1;i<n;i++){//因为起点初始不能被标记已经走过,所以需要手动初始化起点到达其它点的花费 
-		dp[i][1<<i]=a[0][i];
+	    dp[i][1<<i]=a[0][i];
 	}
 	for(int i=0;i<t;i++){//枚举每一个状态 
-		for(int j=0;j<n;j++){//枚举每一个没有走过的点 
-			if(((i>>j)&1)==0){
-				for(int k=0;k<n;k++){//枚举每一个走过的点 
-					if(((i>>k)&1)==1&&dp[j][i^(1<<j)]>dp[k][i]+a[k][j]){//取最优状态 
-						dp[j][i^(1<<j)]=dp[k][i]+a[k][j];
-					}
-				}
+	    for(int j=0;j<n;j++){//枚举每一个没有走过的点 
+		if(((i>>j)&1)==0){
+		    for(int k=0;k<n;k++){//枚举每一个走过的点 
+			if(((i>>k)&1)==1&&dp[j][i^(1<<j)]>dp[k][i]+a[k][j]){//取最优状态 
+			    dp[j][i^(1<<j)]=dp[k][i]+a[k][j];
 			}
+		    }
 		}
+	    }
 	}
 }
 
