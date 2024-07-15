@@ -1,0 +1,62 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+ 
+bool cmp(vector<int> &A, vector<int> &B){             //比较两个数的大小
+    if(A.size()!=B.size()) return A.size()>B.size();  //如果位数多的当然也就是较大数
+    for(int i=A.size()-1;i>=0;i--){       
+        if(A[i]!=B[i]) return A[i]>B[i];              //如果位数相同，如果高位大，那这个数也是较大数   
+    }
+    return true;
+}
+ 
+vector<int> sub(vector<int> &A,vector<int> &B){       //减
+    vector<int> C;
+    int t=0;
+    for(int i=0;i<A.size()||t;i++){                  //如果还能借位或没有完全减完就是一直减下去
+        t = A[i] - t;
+        if(i<B.size()) t -= B[i];
+        C.push_back((t+10)%10);                      //够减，加10取余，还是原数，否则相当于借了1个10
+        if(t<0) t = 1;                               //被上一位相减借过1位，所以减去一个1。如果已经超过了减数，直接填入
+        else t = 0;                                  //如果没有借位，就按实际A[i]来减。
+    }
+    while(C.size()>1&&C.back()==0) C.pop_back();
+    return C;
+}
+ 
+vector<int> div(vector<int> &A, vector<int> &B, vector<int> &r){   //除
+    vector<int> C;
+    int j = B.size();
+    r.assign(A.end()-j,A.end());
+    while(j<=A.size()){
+        int k=0;
+        while(cmp(r,B)){
+            vector<int> s = sub(r,B);
+            r.clear();
+            r.assign(s.begin(),s.end());
+            k++;                                              //k就是被减了几次，也就是得到的商位，被整除的商位。
+        }
+        C.push_back(k);
+        if(j<A.size()) r.insert(r.begin(),A[A.size()-j-1]);   //将上一次余下的数与临近的一位除数再拼成一个能整除的数。
+        if(r.size()>1 && r.back()==0) r.pop_back();           //如果至少是两位，但高位还有0，删除掉。
+        j++;                                                  //保证直到除到j>A.size()结束。
+    }
+    reverse(C.begin(),C.end());                               //反转
+    while(C.size()>1 && C.back()==0) C.pop_back();            //至少两位，还有零就清掉。
+    return C;
+}
+ 
+int main(){
+    string a,b;
+    cin>>a>>b;
+    vector<int> A,B,r;
+    for(int i=a.size()-1;i>=0;i--) A.push_back(a[i]-'0');
+    for(int i=b.size()-1;i>=0;i--) B.push_back(b[i]-'0');
+ 
+    auto C = div(A,B,r);
+    for(int i=C.size()-1;i>=0;i--) printf("%d",C[i]);
+    printf("\n");
+    for(int i=r.size()-1;i>=0;i--) printf("%d",r[i]);
+    return 0;
+}
