@@ -1,0 +1,13 @@
+#include <cstring>
+
+strcat(string1,string2) //string2接到string1后面,返回string1值
+strncat(string1,string2,n) //将string2中前n个字符接到string1,返回值同上
+strcpy(string1, string2)
+strncpy(string1, string2, n)
+strcmp(string1, string2) //比较两个字符串  string1<string2 返回值负数
+strncmp(string1, string2, n) //string2前n个字符进行比较
+strlen(string)
+strlwr(string)     //转换成小写字母
+strupr(string)     //转换成大写字母
+
+string s;   
