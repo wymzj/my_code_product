@@ -17,20 +17,20 @@ Node* pHead = NULL;  //链表头部的结点
 Node* pTail = NULL;  //链表尾部的结点 
 void push(Node& node)
 {
-   if(pTail==NULL && pHead==NULL)
-   {
-	     pHead = &node;
-	     pTail = &node;
-	     node.privious = NULL;
-	     node.next = NULL;
-   }
-	 else
-	 {
-	 	    node.next = NULL;
-	 	    node.privious = pTail;
-	 	    pTail->next = &node;
-	 	    pTail = &node;
-	 }	
+    if(pTail==NULL && pHead==NULL)
+    {
+	   pHead = &node;
+	   pTail = &node;
+	   node.privious = NULL;
+	   node.next = NULL;
+    }
+    else
+    {
+           node.next = NULL;
+	   node.privious = pTail;
+	   pTail->next = &node;
+	   pTail = &node;
+     }	
 }
 
 Node* pop()
