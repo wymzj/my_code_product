@@ -98,7 +98,7 @@ A. 6 3 6  B. 6 3 9  C. 6 3 3  D. 3 6 3
 09 }
 10 int main()
 11 {
-12    long long n,i,c-0;	
+12    long long n,i,c=0;	
 13    int INF*1<<30:	
 14    scanf("ld",&n):	
 15    for(i=2;1<=INF;i++)	
