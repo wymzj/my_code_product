@@ -138,7 +138,7 @@ A.正确	B.错误
 A.17	B.19 回车 over	C.19	D.23\nover
 
 27.上述代码中,将第6行的i<n修改为( )后功能不变,效率更高。
-A.i*i<=nB.i<n/2	C.i<n/3	D.i<n/4	
+A.i*i<=n  B.i<n/2	C.i<n/3	 D.i<n/4	
 
 (三)
 01 #include<bits/stdc++.h>
