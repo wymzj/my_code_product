@@ -1,0 +1,9 @@
+List_a = [3,5,7,8,23,11,13,11]   #一维表达
+List_b = [3,5,7,8,23,[11,13,11]]  #二维表达
+print(len(List_a))  # len()函数能得到列表的长度，也就是有多少个元素
+print(len(List_b))
+print(List_a[-2])   # 负数下标索引
+print(List_b[2])    # 输出7
+print(List_b[5][1]) # 输出
+List_a[2] = 23      #通过下标赋值
+print(List_a)       # 索引位为2的数被改成了23

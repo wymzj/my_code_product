@@ -1,0 +1,5 @@
+Float_a = 2.0
+Float_b = 1.567e+4 # 就是15670
+Float_c = .78
+print(Float_a + Float_b + Float_c)
+print(int(Float_a + Float_b)) # 将浮点型转成整数型

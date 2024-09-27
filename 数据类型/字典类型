@@ -1,0 +1,5 @@
+Dict_a = {123:"AI", 456:"Python"}  #字典以{key:value,key:value}的形式
+print(Dict_a[123])
+Dict_a[456] = "C/C++" # 修改字典中的变量
+print(Dict_a) 
+print(type(Dict_a))     # <class 'dict'>表明为字典类型

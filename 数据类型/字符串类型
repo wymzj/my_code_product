@@ -1,0 +1,7 @@
+string_a = "我的Python学习" #双引号
+string_b = 'BeiJing 北京'   #单引号
+print(string_a)
+print(string_b)
+print(string_a + "->" + string_b) #字符串拼接
+print(type(string_a)) #判断类型 type()为系统判断数据类型函数
+

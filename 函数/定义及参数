@@ -1,0 +1,8 @@
+def mysort(para_list):   #定义一个能对列表数据排序的公用函数
+    for M in range(len(para_list)):
+        for N in range(M+1,len(para_list)):
+            if para_list[M] < para_list[N]:
+                temp = para_list[N]
+                para_list[N] = para_list[M]
+                para_list[M] = temp
+    return para_list
